@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28圈 · 知识库入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fafafa;
+            color: #1e1e1e;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 3rem;
+            flex: 1;
+        }
+
+        /* 标题层级 */
+        h1 {
+            font-size: 2rem;
+            font-weight: 550;
+            letter-spacing: -0.02em;
+            margin: 1.2rem 0 0.3rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin: 2.2rem 0 0.8rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 1.5rem 0 0.5rem;
+            color: #2c2c2c;
+        }
+
+        p {
+            margin: 0.6rem 0 1rem;
+            color: #3b3b3b;
+        }
+
+        /* 链接 */
+        a {
+            color: #1e3c72;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border 0.15s;
+        }
+
+        a:hover {
+            border-bottom-color: #1e3c72;
+        }
+
+        /* 卡片与区块 */
+        .hero-note {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.6rem 1.8rem;
+            margin: 1.8rem 0 2rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.03), 0 2px 8px rgba(0,0,0,0.02);
+            border: 1px solid #eee;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin: 1.2rem 0 1.8rem;
+        }
+
+        .feature-item {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 1.3rem 1.2rem;
+            border: 1px solid #ececec;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+
+        .feature-item h4 {
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 0.3rem;
+            color: #1e1e1e;
+        }
+
+        .feature-item p {
+            font-size: 0.85rem;
+            margin: 0;
+            color: #555;
+        }
+
+        .info-block {
+            border-left: 4px solid #d0d9e8;
+            background: #f7f9fc;
+            padding: 1.2rem 1.5rem;
+            border-radius: 0 10px 10px 0;
+            margin: 1.5rem 0;
+        }
+
+        .faq-mini {
+            list-style: none;
+            margin: 1rem 0 1.8rem;
+        }
+
+        .faq-mini li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #ececec;
+        }
+
+        .faq-mini li:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 0.2rem;
+            color: #222;
+        }
+
+        .faq-a {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .tip-box {
+            background: #f2f5fa;
+            border-radius: 10px;
+            padding: 1rem 1.4rem;
+            font-size: 0.9rem;
+            margin: 1.8rem 0;
+            border: 1px solid #e3e8f0;
+        }
+
+        .tip-box strong {
+            color: #1e3c72;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e4e4e4;
+            margin: 2.5rem 0 0.8rem;
+        }
+
+        .footer-note {
+            font-size: 0.8rem;
+            color: #858585;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eeeeee;
+        }
+
+        /* 响应式 */
+        @media (max-width: 640px) {
+            .container {
+                padding: 1.5rem 1.2rem 2.5rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 0.9rem;
+            }
+            .hero-note {
+                padding: 1.2rem 1.2rem;
+            }
+            .info-block {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- 标题 / hero -->
+    <h1>28圈 · 知识库入口</h1>
+    <p style="color:#5e5e5e; margin-top: -0.2rem; font-size:0.95rem;">再次访问 · 收藏 · 持续关注</p>
+
+    <!-- 说明区 -->
+    <div class="hero-note">
+        <p style="margin-top:0;">
+            <strong>28圈</strong> 是一个持续更新的信息聚合与知识库平台。无论你是首次到访，还是再次回来查找资料，这一页面均提供了索引与快速定位。建议将 <a href="https://portal-28circle.com">28圈</a> 添加至浏览器收藏夹，便于后续直接进入。
+        </p>
+    </div>
+
+    <!-- 目录感布局：特点卡片 -->
+    <h2>内容方向</h2>
+    <div class="feature-grid">
+        <div class="feature-item">
+            <h4>结构化存档</h4>
+            <p>文章、笔记、文档按主题归档，方便回溯和引用。</p>
+        </div>
+        <div class="feature-item">
+            <h4>定期补充</h4>
+            <p>内容随实践与信息更新持续修订，非一次性发布。</p>
+        </div>
+        <div class="feature-item">
+            <h4>精简索引</h4>
+            <p>分类与标签辅助导航，降低再次查找的时间成本。</p>
+        </div>
+        <div class="feature-item">
+            <h4>无冗余干扰</h4>
+            <p>界面聚焦于信息本身，减少无关视觉元素。</p>
+        </div>
+    </div>
+
+    <!-- 提示区 -->
+    <h2>使用建议</h2>
+    <div class="info-block">
+        <p><strong>再次访问场景：</strong> 如果你曾阅读过 <a href="https://portal-28circle.com">28圈</a> 中的某些内容并希望继续查阅，可直接从收藏夹或历史记录进入。页面结构保持稳定，便于定位。</p>
+        <p style="margin-top: 0.8rem;"><strong>收藏与持续关注：</strong> 平台内容会阶段性增补与修订，建议定期回访。你可以将本页或具体目录页加入书签，或通过站内更新日志了解近期变动。</p>
+    </div>
+
+    <!-- 相关信息区 + FAQ 摘要 -->
+    <h2>常见问题摘要</h2>
+    <ul class="faq-mini">
+        <li>
+            <span class="faq-q">如何快速找到之前看过的文章？</span>
+            <span class="faq-a">可使用站内搜索或按分类筛选。建议在首次阅读时留意文章标签。</span>
+        </li>
+        <li>
+            <span class="faq-q">内容多久更新一次？</span>
+            <span class="faq-a">更新频率不固定，但每次重要修订会于首页或更新日志中注明。</span>
+        </li>
+        <li>
+            <span class="faq-q">是否提供外部引用来源？</span>
+            <span class="faq-a">部分条目会附参考链接或出处，可在正文末尾查阅。</span>
+        </li>
+    </ul>
+
+    <!-- 额外提示框 -->
+    <div class="tip-box">
+        <strong>提示</strong> · 若你希望随时获取最新内容，可留意站内公告。再次到访时，建议先浏览最近更新区域。<br>
+        <span style="display:inline-block; margin-top: 0.3rem;">→ 直接前往 <a href="https://portal-28circle.com">28圈</a> 首页</span>
+    </div>
+
+    <hr>
+    <div class="footer-note">
+        知识库入口 · 简洁索引 · 可收藏
+    </div>
+
+</div>
+</body>
+</html>
